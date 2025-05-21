@@ -62,7 +62,7 @@
    - **セキュリティ** で **オープン* をクリック
    - **追加** をクリック
    - **トリガー** セクションに表示されている **API エンドポイント** の URL にアクセス
-   - **Hello from Lambda** と表示されることを確認
+   - **{"message": "Hello from Lambda"}** と表示されることを確認
 ---
 
 * lambda_function.py
