@@ -1,5 +1,6 @@
 from datetime import datetime
 import os
+import json
 
 # ハンドラ関数の外側で日時データを取得
 outside_handler = datetime.now()
