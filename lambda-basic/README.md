@@ -44,8 +44,25 @@
   - [**ログ出力**] セクションを確認
   - その後、数回 [**テスト**] をクリック。
     - テスト実行する毎に、[**ログ出力**] の [**outside_handler**] と [**inside_handler**] の値がどうなるかを確認
-1. Amazon API Gateway との統合
-   - 
+1. Amazon API Gateway と統合します。
+   - **コード** タブをクリック
+   - return 文を下記のように変更
+   - ```
+    # API Gateway と統合するために return の内容を変更する 
+    return {
+        "statusCode": 200,
+        "body": json.dumps({"message": "Hello from Lambda"})
+    }
+     ```
+   - [**Deploy**] をクリック
+   - **概要** セクションで **トリガーを追加** をクリック
+   - **トリガーの設定** で **API Gateway** をクリック
+   - **インテント** で **新規 API を作成** をクリック
+   - **API タイプ** で **REST API** をクリック
+   - **セキュリティ** で **オープン* をクリック
+   - **追加** をクリック
+   - **トリガー** セクションに表示されている **API エンドポイント** の URL にアクセス
+   - **Hello from Lambda** と表示されることを確認
 ---
 
 * lambda_function.py
