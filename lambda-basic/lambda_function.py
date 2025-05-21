@@ -23,5 +23,5 @@ def lambda_handler(event, context):
     # event オブジェクトから name の値を取得して return のペイロードに含める
     return {
         "statusCode": 200,
-        "body": message + ' '  + event["name"]
+        "body": message + " "  + event["name"]
     }
