@@ -48,11 +48,11 @@
    - **コード** タブをクリック
    - return 文を下記のように変更
    - ```
-    # API Gateway と統合するために return の内容を変更する 
-    return {
+     # API Gateway と統合するために return の内容を変更する 
+     return {
         "statusCode": 200,
         "body": json.dumps({"message": "Hello from Lambda"})
-    }
+     }
      ```
    - [**Deploy**] をクリック
    - **概要** セクションで **トリガーを追加** をクリック
