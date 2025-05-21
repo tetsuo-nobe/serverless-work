@@ -9,11 +9,11 @@ def lambda_handler(event, context):
     inside_handler = datetime.now()  
     
     # 取得した日時データをログ出力
-    print('outside_handler :' + str(outside_handler))
-    print('inside_handler  :' + str(inside_handler))
+    print("outside_handler :" + str(outside_handler))
+    print("inside_handler  :" + str(inside_handler))
     
     # 環境変数 MSG から値を取得
-    message = os.environ.get('MSG', 'Hello')
+    message = os.environ.get("MSG", "Hello")
     
     # context オブジェクトからいくつかの値をログ出力
     print("Lambda function ARN:", context.invoked_function_arn)
@@ -22,6 +22,6 @@ def lambda_handler(event, context):
     
     # event オブジェクトから name の値を取得して return のペイロードに含める
     return {
-        'statusCode': 200,
-        'body': message + ' '  + event['name']
-        }
+        "statusCode": 200,
+        "body": message + ' '  + event["name"]
+    }
