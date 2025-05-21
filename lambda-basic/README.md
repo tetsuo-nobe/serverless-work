@@ -25,7 +25,6 @@
    - [**保存**] をクリック
 1. Lambda 関数のテストを行ないます。
    - [**テスト**] タブをクリック
-   - イベント名: `work-event`
    - イベント JSON: 下記の内容に置換える
      ```
      {
@@ -45,12 +44,13 @@
   - [**ログ出力**] セクションを確認
   - その後、数回 [**テスト**] をクリック。
     - テスト実行する毎に、[**ログ出力**] の [**outside_handler**] と [**inside_handler**] の値がどうなるかを確認
+1. Amazon API Gateway との統合
+   - 
 ---
 
 * lambda_function.py
   - Lambda 関数のコード
-* event.json
-  - Lambda 関数のテストで使用する event オブジェクト用の JSON
+
 
 
 
